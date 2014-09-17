@@ -1,0 +1,65 @@
+MAJOR THINGS I WANT TO BE DONE
+
+1. Categories for groups like groups.yahoo.com ADD TAGS to be furthur divided(subqueries I think)
+2. Admin panel split into 2 user (change password, email, contact) and admin(manage requests, edit group properties)
+3. View All Members(to contact if needed/know who they are)
+4.Open group -> no admin, anyone can join, deleted when everyone leaves
+closed group->super admin,choose super admins, remove poeple, and approval Any super admin can delete
+Visibility->secret, 
+
+super admin-> edit group,delete group and kick people out
+
+5. User Profiles
+
+6. trigger to delete group whene number of members=0
+
+SEARCH -> VIBIL
+
+
+add user profile links
+remove all autocomplete
+Change css style
+Add views, aggregates and possibly triggers
+
+BUGS NEED TO BE FIXED
+when you use ' in title appears as \'
+Activation serves no point now.
+-----------------------------------------------------------------------------------------------------------------------------------
+POSSIBILITIES 
+48 hours link.
+
+Triggers somehow
+Need DOB to validate stuff
+
+TO BE IMPLEMENTED
+
+Edit group 		- NOT DONE (admin can do this)
+home page most recent updates/notifications - not implemented instead all groups
+invite users
+admin panel -> change password, check requests
+block/reject users from joining group- add another column status
+delete account
+SEARCH POSTS!!! through a search bar.
+
+search			-done
+find group		-done
+join group		-done
+leave group		-done
+delete post		-done
+delete reply		-done
+Edit post		-done
+
+BUGS 
+Empty row bugs
+Shift to mysqli for greater integrity
+Request Spam- Multiple requests can be sent from same user to same group
+Invite email spam!
+length of user name
+Remove all the comments from code
+remove localhost -> replace with url
+
+FEATURES TO BE ADDED 
+Email as part of login, forgot password, and invites
+Chat -  Rethink (Good to have feature)
+File Upload	--NOT DOING THIS !!
+URL fix- make the URLS neater? - not needed

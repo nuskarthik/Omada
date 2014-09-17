@@ -1,0 +1,18 @@
+TO BE IMPLEMENTED
+
+search
+find group
+join group
+leave group
+delete post
+delete reply
+Edit group 
+Edit post
+home page most recent updates/notifications
+admin for groups
+invite users/
+hidden users
+
+BUGS 
+Empty row bugs
+Shift to mysqli for greater integrity

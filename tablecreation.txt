@@ -1,0 +1,66 @@
+Queries run so far
+
+CREATE TABLE users (  
+user_id     INT(8) NOT NULL AUTO_INCREMENT,  
+user_name   VARCHAR(30) NOT NULL,  
+user_pass   VARCHAR(255) NOT NULL,  
+user_email  VARCHAR(255) NOT NULL,  
+user_date   DATETIME NOT NULL,  
+user_level  INT(8) NOT NULL,  
+UNIQUE INDEX user_name_unique (user_name),  
+PRIMARY KEY (user_id)  
+) ENGINE=InnoDB;  
+
+CREATE TABLE groups (  
+group_id          INT(8) NOT NULL AUTO_INCREMENT,  
+group_name        VARCHAR(255) NOT NULL,  
+group_description     VARCHAR(255) NOT NULL,
+group_level INT(8) NOT NULL, 
+UNIQUE INDEX cat_name_unique (group_name),  
+PRIMARY KEY (group_id)  
+) ENGINE=INNODB; 
+
+CREATE TABLE posts (  
+post_id         INT(8) NOT NULL AUTO_INCREMENT,  
+post_content        TEXT NOT NULL,  
+post_date       DATETIME NOT NULL,  
+post_topic      INT(8) NOT NULL,  
+post_by     INT(8) NOT NULL,  
+PRIMARY KEY (post_id)  
+) ENGINE=INNODB;  
+
+CREATE TABLE requests (  
+request_id          INT(8) NOT NULL AUTO_INCREMENT,  
+user_id         INT(8) NOT NULL,  
+post_date       DATETIME NOT NULL,  
+group_id         INT(8) NOT NULL,
+approved     INT(8) NOT NULL,  
+user_name    VARCHAR(30) NOT NULL,
+PRIMARY KEY (request_id)  
+) ENGINE=INNODB;  
+
+CREATE trigger addmember
+after update on groups
+FOR EACH ROW
+BEGIN
+IF ((select COUNT(*) from groups e where e.number_of_members= 0) > 0) THEN
+ DELETE FROM groups WHERE number_of_members= 0;
+ END IF;
+END$$
+
+CREATE TABLE tags (
+tag_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+group_id          INT(8) NOT NULL,
+tag VARCHAR(255) NOT NULL,
+PRIMARY KEY (tag_id,group_id),
+FOREIGN KEY(group_id) REFERENCES groups(group_id) 
+ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+
+
+
+$mysql_host = "mysql6.000webhost.com";
+$mysql_database = "a5334575_omada";
+$mysql_user = "a5334575_omada";
+$mysql_password = "cs2102";

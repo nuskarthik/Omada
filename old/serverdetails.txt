@@ -1,0 +1,22 @@
+go to go to http://members.000webhost.com/login.php
+
+login details:
+username: projectdatabase@yahoo.com
+password: cs2102
+
+FTP details:
+
+FTP host name	assembler.comuv.com
+FTP user name	a5334575
+FTP password	cs2102
+Folder to upload files	public_html
+
+server
+mysql6.000webhost.com
+mysql details:
+» MySQL Database	
+a5334575_cs2102
+» MySQL User	
+a5334575_cs2102
+password:
+cs2102
